@@ -1,6 +1,6 @@
 # 🚀 Vortex Digital - Landing Page (Teste Front-End / Full-Stack - Ellos Design)
 
-Bem-vindo(a) ao repositório da Vortex Digital, uma landing page desenvolvida como parte de um teste técnico para a vaga de Estágio Front-End / Full-Stack, com foco em experiência do usuário, responsividade e integração com banco de dados.
+Bem-vindo(a) ao repositório da Vortex Digital, uma landing page desenvolvida como parte de um teste técnico para a vaga de Estágio Front-End, com foco em experiência do usuário, responsividade e integração com banco de dados.
 
 🌐 Visualizar o Projeto
 
