@@ -1,12 +1,14 @@
-# 🚀 Vortex Digital - Landing Page (Teste Front-End / Full-Stack - Ellos Design)
+# 🚀 Vortex Digital - Landing Page (Teste Front-End - Ellos Design)
 
 Bem-vindo(a) ao repositório da Vortex Digital, uma landing page desenvolvida como parte de um teste técnico para a vaga de Estágio Front-End, com foco em experiência do usuário, responsividade e integração com banco de dados.
-
-🌐 Visualizar o Projeto
 
 ## 📌 Sobre o Projeto
 
 A landing page Vortex Digital foi criada para apresentar uma agência fictícia especializada em marketing digital, performance, SEO e mídia paga.
+
+## 📸 Preview do Projeto
+
+![Vortex Digital Preview](preview-vortex.png)
 
 ### O projeto destaca:
 
