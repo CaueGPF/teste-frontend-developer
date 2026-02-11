@@ -1,58 +1,111 @@
-# Teste para estágio Frontend e Full-Stack
+# 🚀 Vortex Digital - Landing Page (Teste Front-End / Full-Stack - Ellos Design)
 
-## Sobre a Ellos Design
+Bem-vindo(a) ao repositório da Vortex Digital, uma landing page desenvolvida como parte de um teste técnico para a vaga de Estágio Front-End, com foco em experiência do usuário, responsividade e integração com banco de dados.
 
-A **Ellos Design** é uma agência de marketing e criação de sites localizada em Guarulhos / SP. Somos uma empresa em constante evolução e sempre estamos abertos para pessoas que gostem de tecnologia e queiram trabalhar na área, mas que principalmente queiram aprender e crescer com a nossa empresa.
+🌐 Visualizar o Projeto
 
-## Sobre o teste
+## 📌 Sobre o Projeto
 
-Este é um teste prático que desenvolvemos para a avaliação dos candidatos participantes de nosso processo seletivo para vagas de Frontend ou Full-Stack.
+A landing page Vortex Digital foi criada para apresentar uma agência fictícia especializada em marketing digital, performance, SEO e mídia paga.
 
-## Tecnologias para o desafio
+### O projeto destaca:
 
-Você deve utilizar as seguintes tecnologias para o desenvolvimento do teste:
+- Seção Hero com formulário funcional
+
+- Seção Sobre com estatísticas da empresa
+
+- Seção de Benefícios / Serviços
+
+- FAQ interativo com accordion
+
+- Menu mobile responsivo
+
+- Header com efeito ao scroll
+
+- Formulário funcional com gravação no banco de dados
+
+- Design moderno e responsivo
+
+- Animações com JavaScript (Intersection Observer)
+
+## 🛠️ Tecnologias Utilizadas
 
 - HTML5
-- CSS
-- JavaScript ou jQuery
-- PHP (Para Full-Stack)
-- MySQL (Para Full-Stack)
 
-## O que nos impressionaria no teste
+- SCSS (Sass)
 
-- Utilização de um pré-processador para o CSS (De preferência o Sass)
-- Aplicação de animações em CSS (Ex: Animações ao realizar scroll)
-- Ver o teste rodando em live (Bucket estático S3, Heroku, Firebase Hosting, etc)
-- Documentação do projeto (Com instruções para executar)
+- JavaScript (Vanilla JS)
 
-## O que avaliaremos no seu teste
+- PHP
 
-- Criatividade
-- Organização do código
-- Performance do código
-- Boas práticas de desenvolvimento
-- Documentação do código
-- Adaptação mobile (layout responsivo)
-- Documentação do projeto (Com instruções para executar)
+- MySQL
 
-## Etapas para realização do teste
+- PDO (conexão segura com banco de dados)
 
-- Faça um [fork](https://github.com/Ellos-Design/teste-frontend-developer/fork) desse projeto em sua conta do GitHub
-- Realize o desafio proposto
-- Faça um push para seu repositório com o desafio implementado
-- Envie um email para (vagas@ellosdesign.com.br) com a URL do seu projeto avisando que você concluiu o teste
+## 💻 Como Executar Localmente
 
-## O desafio
+Siga os passos abaixo para rodar o projeto no seu computador:
 
-Você deverá desenvolver uma landing page seguindo a estrutura exibida na imagem abaixo. Você pode utilizar os textos e imagens de sua preferência para a criação da página.
+### 1. Clonar o repositório
+``` bash
+git clone https://github.com/CaueGPF/teste-frontend-developer.git
+```
+### 2. Configurar servidor local
 
-#### Full-Stack
+Instale o Laragon ou XAMPP
 
-Deixar o formulário da landing page funcional, onde ao preencher as informações e clicar para enviar, o formulário será submetido e os dados deverão ser gravados em um banco de dados (Neste caso será necessário nos enviar o arquivo SQL para podermos implementar o banco para avaliação do teste).
+Coloque a pasta do projeto dentro de:
+``` bash
+www/ (Laragon)
+ou
+htdocs/ (XAMPP)
+```
+### 3. Criar o banco de dados
 
-> [!IMPORTANT]
-> Atenção: O mockup abaixo é apenas um esqueleto estrutural. Não queremos que você replique o design cinza e estático do modelo. Use sua criatividade para definir uma marca fictícia (ou real), escolher uma paleta de cores, tipografia e imagens que deem vida ao projeto. Sinta-se livre para adaptar o layout, desde que mantenha os elementos essenciais.
+Acesse o phpMyAdmin e execute:
+``` sql
+CREATE DATABASE ellos_db;
+```
 
-![Template da página a ser desenvolvida](https://github.com/Ellos-Design/teste-frontend-developer/blob/master/wireframe.png?raw=true)
+Crie a tabela leads:
+``` sql
+CREATE TABLE leads (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(20),
+    mensagem TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+### 4. Configurar conexão com o banco
 
-**Boa sorte! Use sua criatividade e mostre do que você é capaz.**
+No arquivo **includes/db.php**, configure:
+``` php
+$host = 'localhost';
+$db   = 'ellos_db';
+$user = 'root';
+$pass = '';
+```
+### 5. Abrir no navegador
+``` bash
+http://localhost/ellos-test/
+```
+
+Preencha o formulário e verifique os dados sendo gravados corretamente no banco de dados.
+
+🌐 Deploy
+
+### O projeto está hospedado em:
+
+👉 (https://vortex-digital-cauegpf.infinityfree.me)
+
+Banco de dados configurado em hospedagem remota via InfinityFree.
+
+## 👨‍💻 Autor
+
+**Cauê Gonçalves Pestile Fernandes**
+  [Linkedin](https://www.linkedin.com/in/cauegpf/) | [GitHub](https://github.com/CaueGPF)
+
+Agradeço a oportunidade de participar deste teste técnico.
+Este projeto foi desenvolvido com dedicação, aplicando boas práticas de organização, responsividade e integração full-stack.
