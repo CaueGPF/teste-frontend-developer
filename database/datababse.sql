@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS ellos_db;
+USE ellos_db;
+
+CREATE TABLE IF NOT EXISTS leads (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(30),
+    mensagem TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

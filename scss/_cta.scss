@@ -1,0 +1,89 @@
+.final-cta {
+  padding: $space-section 0;
+  background: linear-gradient(135deg, $color-hero-start, $color-hero-end);
+  position: relative;
+  overflow: hidden;
+
+  // Blobs decorativos
+  &__blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+
+    &--1 {
+      top: 2.5rem;
+      right: 2.5rem;
+      width: 16rem;
+      height: 16rem;
+      background: rgba($color-accent, 0.1);
+      filter: blur(60px);
+    }
+
+    &--2 {
+      bottom: 2.5rem;
+      left: 2.5rem;
+      width: 12rem;
+      height: 12rem;
+      background: rgba($color-primary-light, 0.1);
+      filter: blur(60px);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: $space-2xl;
+    align-items: center;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $color-primary-fg;
+    line-height: 1.2;
+    margin-bottom: $space-lg;
+
+    @media (min-width: $bp-md) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    color: rgba($color-primary-fg, 0.7);
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  &__card {
+    background: rgba($color-card, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba($color-primary-fg, 0.15);
+    border-radius: $radius-xl;
+    padding: $space-xl;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+      padding: $space-2xl;
+    }
+
+    &-text {
+      color: rgba($color-primary-fg, 0.8);
+      line-height: 1.7;
+      margin-bottom: $space-lg;
+    }
+
+    &-note {
+      color: rgba($color-primary-fg, 0.5);
+      font-size: 0.875rem;
+      margin-top: $space-md;
+    }
+  }
+}

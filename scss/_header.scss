@@ -1,0 +1,180 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: $space-lg 0;
+  transition: all $transition-base;
+
+  // Estado scrolled (adicionado via JS)
+  &--scrolled {
+    background: rgba($color-card, 0.9);
+    backdrop-filter: blur(12px);
+    box-shadow: $shadow-md;
+    padding: $space-md 0;
+
+    .header__logo-text {
+      color: $color-fg;
+    }
+
+    .header__link {
+      color: $color-fg;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    .header__phone {
+      border-color: $color-primary;
+      color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-primary-fg;
+      }
+    }
+
+    .header__menu-btn {
+      color: $color-fg;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // Logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+  }
+
+  &__logo-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: $radius-md;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-primary-fg;
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__logo-text {
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $color-primary-fg;
+    transition: color $transition-base;
+  }
+
+  // Desktop Nav
+  &__nav {
+    display: none;
+    align-items: center;
+    gap: $space-xl;
+
+    @media (min-width: $bp-md) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba($color-primary-fg, 0.8);
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  // Phone
+  &__phone {
+    display: none;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    border-radius: $radius-full;
+    border: 1px solid rgba($color-primary-fg, 0.4);
+    color: $color-primary-fg;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all $transition-base;
+
+    @media (min-width: $bp-md) {
+      display: flex;
+    }
+
+    &:hover {
+      background: rgba($color-primary-fg, 0.1);
+    }
+
+    &-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  // Mobile Menu Button
+  &__menu-btn {
+    display: flex;
+    color: $color-primary-fg;
+    padding: $space-sm;
+
+    @media (min-width: $bp-md) {
+      display: none;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  // Mobile Nav
+  &__mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: $space-md;
+    padding: $space-md $space-lg $space-lg;
+    background: rgba($color-card, 0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid $color-border;
+
+    @media (min-width: $bp-md) {
+      display: none !important;
+    }
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  &__mobile-link {
+    font-weight: 500;
+    color: $color-fg;
+    padding: $space-sm 0;
+
+    &--phone {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+      color: $color-primary;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, $color-hero-start, $color-hero-end);
+  overflow: hidden;
+  padding: 8rem 0 $space-section;
+
+  &__blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+
+    &--1 {
+      top: -10rem;
+      right: -10rem;
+      width: 24rem;
+      height: 24rem;
+      background: rgba($color-accent, 0.1);
+      filter: blur(60px);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    &--2 {
+      bottom: -5rem;
+      left: -5rem;
+      width: 18rem;
+      height: 18rem;
+      background: rgba($color-primary-light, 0.1);
+      filter: blur(60px);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: $space-2xl;
+    align-items: center;
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+  }
+
+  // Conteúdo esquerdo
+  &__badge {
+    display: inline-block;
+    padding: $space-sm $space-md;
+    border-radius: $radius-full;
+    border: 1px solid rgba($color-primary-fg, 0.2);
+    color: rgba($color-primary-fg, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: $space-lg;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    color: $color-primary-fg;
+    margin-bottom: $space-lg;
+    line-height: 1.15;
+
+    @media (min-width: $bp-md) {
+      font-size: 3rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: rgba($color-primary-fg, 0.7);
+    max-width: 32rem;
+    margin-bottom: $space-xl;
+    line-height: 1.7;
+  }
+
+  // Status
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+    flex-wrap: wrap;
+  }
+
+  &__stat {
+    text-align: center;
+
+    &-value {
+      display: block;
+      font-family: $font-display;
+      font-weight: 700;
+      font-size: 1.875rem;
+      color: $color-accent;
+    }
+
+    &-label {
+      font-size: 0.875rem;
+      color: rgba($color-primary-fg, 0.6);
+    }
+
+    &-divider {
+      width: 1px;
+      height: 3rem;
+      background: rgba($color-primary-fg, 0.2);
+    }
+  }
+
+  // Formulário
+  &__form-card {
+    background: $color-card;
+    border-radius: $radius-xl;
+    padding: $space-xl;
+    box-shadow: $shadow-xl;
+    border: 1px solid rgba($color-border, 0.5);
+
+    @media (min-width: $bp-md) {
+      padding: $space-2xl;
+    }
+  }
+
+  &__form-title {
+    font-size: 1.25rem;
+    color: $color-card-fg;
+    margin-bottom: $space-xs;
+  }
+
+  &__form-desc {
+    font-size: 0.875rem;
+    color: $color-muted-fg;
+    margin-bottom: $space-lg;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $space-md;
+    border-radius: $radius-md;
+    background: $color-muted;
+    border: 1px solid $color-border;
+    color: $color-fg;
+    font-size: 1rem;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
+    outline: none;
+
+    &::placeholder {
+      color: $color-muted-fg;
+    }
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.15);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+  }
+}

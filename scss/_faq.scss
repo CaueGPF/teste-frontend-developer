@@ -1,0 +1,86 @@
+.faq {
+  padding: $space-section 0;
+  background: $color-bg;
+
+  &__container {
+    max-width: 48rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-3xl;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__item {
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    transition: border-color $transition-base;
+
+    &:hover {
+      border-color: rgba($color-primary, 0.3);
+    }
+
+    &--open {
+      .faq__chevron {
+        transform: rotate(180deg);
+      }
+
+      .faq__answer {
+        max-height: 15rem;
+        opacity: 1;
+        padding: 0 $space-lg $space-lg;
+      }
+    }
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space-lg;
+    background: $color-card;
+    text-align: left;
+    transition: background $transition-fast;
+    gap: $space-md;
+
+    &:hover {
+      background: rgba($color-muted, 0.5);
+    }
+
+    span {
+      font-family: $font-display;
+      font-weight: 600;
+      color: $color-card-fg;
+      font-size: 1rem;
+    }
+  }
+
+  &__chevron {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: $color-muted-fg;
+    transition: transform $transition-base;
+  }
+
+  &__answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height $transition-base, opacity $transition-base, padding $transition-base;
+    padding: 0 $space-lg;
+
+    p {
+      color: $color-muted-fg;
+      line-height: 1.7;
+    }
+  }
+}

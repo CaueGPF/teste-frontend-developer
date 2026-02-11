@@ -1,0 +1,107 @@
+.footer {
+  background: $color-footer-bg;
+  padding: $space-2xl 0;
+
+  @media (min-width: $bp-md) {
+    padding: $space-section 0 $space-2xl;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $space-xl;
+    margin-bottom: $space-2xl;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: $space-2xl;
+    }
+  }
+
+  // Logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: $radius-md;
+      background: $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-primary-fg;
+      font-family: $font-display;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-family: $font-display;
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: $color-footer-fg;
+    }
+  }
+
+  &__brand-desc {
+    color: rgba($color-footer-fg, 0.5);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  // Links
+  &__heading {
+    font-family: $font-display;
+    font-weight: 600;
+    color: $color-footer-fg;
+    margin-bottom: $space-md;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+
+    a {
+      font-size: 0.875rem;
+      color: rgba($color-footer-fg, 0.5);
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  // Contact
+  &__contact {
+    p {
+      font-size: 0.875rem;
+      color: rgba($color-footer-fg, 0.5);
+      margin-bottom: $space-sm;
+    }
+  }
+
+  // Bottom
+  &__bottom {
+    border-top: 1px solid rgba($color-footer-fg, 0.1);
+    padding-top: $space-xl;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    align-items: center;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: rgba($color-footer-fg, 0.4);
+      text-align: center;
+    }
+  }
+}
